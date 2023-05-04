@@ -1,56 +1,39 @@
 import Link from "next/link";
-import { useState } from "react";
-import { FaBars } from "react-icons/fa";
+import * as Fa from "react-icons/fa";
 import { links } from "./links";
-import MobileNavbar from "./mobile-navbar";
 
 const Navbar = () => {
-  const [show, setShow] = useState(false);
-
   return (
-    <nav className="bg-bg text-white font-main shadow-md">
-      <div className="w-[90%] mx-auto py-3 flex justify-between items-center">
-        <Link href="/" className="text-lg md:text-2xl text-teal-500 font-bold">
-          Coins Exchange
-        </Link>
-        {/* links */}
-        <div className="flex items-center md:gap-12 justify-between">
-          {/* links */}
-          <div className="hidden md:flex gap-6 items-center">
-            {links.map((link: any) => (
-              <Link
-                href={`/${link.path}`}
-                key={link.id}
-                className="capitalize hover:text-teal-500 hover:font-bold"
-              >
-                {link.name}
-              </Link>
-            ))}
-          </div>
-          {/* cta buttons */}
-          <div className="flex items-center gap-4">
-            <Link
-              href="/auth/sign-up"
-              className="font-main bg-teal-500 py-2 px-4 rounded text-bg font-medium"
-            >
-              Register Now
+    <nav className="bg-bg text-white">
+      <div className="p-3 flex justify-between items-center font-lp">
+        <div className="p-3">
+          <img src="/logo.webp" alt="logo" className="w-[50%]" />
+        </div>
+        <div className="space-x-8 text-lg capitalize hidden md:block">
+          {links.map((link) => (
+            <Link href={link.path} className="hover:text-blue-500 ease-in-out">
+              {link.name}
             </Link>
-            <Link
-              href="/auth/sign-in"
-              className="font-main hidden md:inline-block border-teal-500 border-[1px] px-6 py-2 rounded font-medium text-teal-500"
-            >
-              Login
-            </Link>
-          </div>
-          <div className="inline-block md:hidden mx-1">
-            <FaBars
-              onClick={() => setShow(true)}
-              className="fill-success_light cursor-pointer"
-            />
-          </div>
+          ))}
+        </div>
+        <div className="md:flex items-center gap-4 hidden">
+          <Link
+            href="/auth/sign-in"
+            className="flex items-center gap-2 text-blue-600 font-bold"
+          >
+            <Fa.FaKey /> Login
+          </Link>
+          <Link
+            href="/auth/sign-in"
+            className="text-white bg-blue-600 rounded shadow-md font-bold p-2"
+          >
+            Get funded
+          </Link>
+        </div>
+        <div className="md:hidden block">
+          <Fa.FaBars size={45} />
         </div>
       </div>
-      <MobileNavbar show={show} close={setShow} />
     </nav>
   );
 };

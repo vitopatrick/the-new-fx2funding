@@ -26,7 +26,7 @@ export const useFetchUser = () => {
     setLoading(true);
     const fetchUser = async () => {
       //   create document ref
-      const docRef = doc(store, "/users", `/${user.email}`);
+      const docRef = doc(store, "/clients", `/${user.email}`);
       onSnapshot(
         docRef,
         (doc) => {

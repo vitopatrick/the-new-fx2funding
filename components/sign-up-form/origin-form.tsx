@@ -46,32 +46,18 @@ const StepTwo = ({ move }: any) => {
         name,
       });
 
-      let requestOptions: any = {
-        method: "POST",
-        headers: myHeaders,
-        body: raw,
-        redirect: "follow",
-      };
-
-      const res = await fetch("/api/welcome", requestOptions);
-      const text = await res.text();
       // then create the users collection for firebase
       const docRef = doc(store, "/users", `/${user.email}`);
       await setDoc(docRef, {
-        Email: email,
-        Password: password,
-        country_of_origin,
-        Telephone: phone_number,
-        TradingAccount: 0,
-        MainAccount: 0,
-        StakingAccount: 0,
+        email: email,
+        password: password,
+        country: country_of_origin,
+        telephone: phone_number,
+        balance: 0,
+        deposited: 0,
         verified: false,
         createAt: user.metadata.creationTime,
-        Name: name,
-        btc: 0,
-        eth: 0,
-        usdt: 0,
-        tron: 0,
+        name: name,
       });
 
       // redirect users to the there dashboard

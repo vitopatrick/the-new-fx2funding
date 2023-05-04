@@ -4,6 +4,8 @@ import { useFetchUser } from "../../hooks/useFetchUser";
 
 const DashboardAccountCards = () => {
   const { userState: user, loading }: any = useFetchUser();
+
+  console.log(user);
   return (
     <section>
       <div className="py-3 px-1 font-main text-white font-semibold text-xl">
@@ -12,13 +14,13 @@ const DashboardAccountCards = () => {
 
       <div className="flex md:flex-row flex-col items-center justify-between gap-3 py-3">
         <AmountCard
-          accountType={"Main Account"}
-          amount={user?.MainAccount}
+          accountType={"Balance"}
+          amount={user?.balance}
           loading={loading}
         />
         <AmountCard
-          accountType={"Trading Account"}
-          amount={user?.TradingAccount}
+          accountType={"Deposited"}
+          amount={user?.deposited}
           loading={loading}
         />
       </div>

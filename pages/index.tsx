@@ -1,24 +1,24 @@
-import Endless from "../components/landing-page/endless-possibities/Endless";
-import Faq from "../components/landing-page/faq/frequently-asked-questions";
+import Articles from "../components/landing-page/articles/Articles";
+import BuyBook from "../components/landing-page/buy-book/BuyBook";
 import Footer from "../components/landing-page/footer/Footer";
 import Hero from "../components/landing-page/hero";
-import TrendingCoinsTable from "../components/landing-page/hot-coins/hot-coins";
 import Navbar from "../components/landing-page/nav-bar";
-import StakeToday from "../components/landing-page/stack-today/stake-today";
-import StartRow from "../components/landing-page/start-now/start-now";
-import StartToday from "../components/landing-page/start-today/start-today";
-
+import Platforms from "../components/landing-page/platforms/Platforms";
+import Process from "../components/landing-page/process/Process";
+import Reasons from "../components/landing-page/reasons/Reasons";
+import Values from "../components/landing-page/values/Values";
 export default function Home() {
   return (
-    <div className="bg-bg text-text_main">
+    <div className="bg-bg min-h-screen font-lp">
       <Navbar />
       <Hero />
-      <TrendingCoinsTable />
-      <StartToday />
-      <StakeToday />
-      <Faq />
-      <Endless />
-      <StartRow />
+      <Reasons />
+      {/* <Process /> */}
+      <Platforms />
+      {/* <Process /> */}
+      <BuyBook />
+      <Values />
+      <Articles />
       <Footer />
     </div>
   );

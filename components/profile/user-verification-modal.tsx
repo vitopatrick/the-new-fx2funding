@@ -37,7 +37,7 @@ const UserModal = ({ hide, setHide }: UserModalTypes) => {
 
     try {
       // update the document
-      const userRef = doc(store, "users", `${state.email}`);
+      const userRef = doc(store, "/clients", `${state.email}`);
       await updateDoc(userRef, {
         verfied: true,
         address: homeAddress,
@@ -50,22 +50,6 @@ const UserModal = ({ hide, setHide }: UserModalTypes) => {
         bodyClassName: "toast",
       });
 
-      // send the Verification email
-      let myHeaders = new Headers();
-      myHeaders.append("Content-Type", "application/json");
-
-      let raw = JSON.stringify({
-        email: state.email,
-      });
-
-      let requestOptions: unknown | any = {
-        method: "POST",
-        headers: myHeaders,
-        body: raw,
-        redirect: "follow",
-      };
-
-      await fetch("/api/verification", requestOptions);
       router.push("/account-profile");
       // upload Image
       const imgRef = ref(bucket, `proofImg/${photoRef.current.files[0].name}`);

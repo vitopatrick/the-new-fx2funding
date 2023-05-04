@@ -25,12 +25,6 @@ export const FIRST_LINKS = [
 
 export const SECOND_LINKS = [
   {
-    key: "wallet",
-    label: "Wallet",
-    path: "/wallet",
-    icon: <FaWallet />,
-  },
-  {
     key: "deposit",
     label: "Deposit",
     path: "/deposit",
@@ -48,23 +42,5 @@ export const SECOND_LINKS = [
     path: "/market",
     icon: <SiMarketo />,
   },
-  {
-    key: "staking",
-    label: "Staking",
-    path: "/staking",
-    icon: <BsStack />,
-  },
-  {
-    key: "trading",
-    label: "Volume Trading",
-    path: "/volume-trading",
-    icon: <RiExchangeDollarFill />,
-  },
-  // {
-  //   key: "referral",
-  //   label: "Referral",
-  //   path: "/referral",
-  //   icon: <FaHandshakeAltSlash />,
-  // },
 ];
 

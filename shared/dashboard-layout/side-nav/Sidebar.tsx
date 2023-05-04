@@ -27,7 +27,7 @@ const Sidebar = () => {
         <div>
           {/* logo flex container */}
           <div className="mb-8 font-bold text-button uppercase font-main text-xl">
-            Coins Exchange
+            <img src="/logo.webp" alt="logo" className="w-[50%] p-2" />
           </div>
           {FIRST_LINKS.map((link) => (
             <Link

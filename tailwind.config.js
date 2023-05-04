@@ -8,13 +8,13 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        main: ["Nunito Sans", "sans-serif"],
+        lp: ["Poppins", "sans-serif"],
       },
       colors: {
-        bg: "#111827",
-        card: "#1f2937",
+        bg: "#030712",
+        card: "#18181b",
         bgBoard: "#0b0e11",
-        button: "#f59e0b",
+        button: "#134e4a",
       },
     },
   },

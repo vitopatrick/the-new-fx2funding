@@ -1,22 +1,27 @@
 export const links = [
   {
     id: 1,
-    path: "about",
-    name: "about us",
+    path: "#",
+    name: "How Funding works",
   },
   {
     id: 2,
-    path: "market",
-    name: "market",
+    path: "#",
+    name: "FAQ",
   },
   {
     id: 3,
-    path: "volume-trading",
-    name: "trade",
+    path: "#",
+    name: "Blog",
   },
   {
-    id: 3,
-    path: "staking",
-    name: "stake",
+    id: 4,
+    path: "#",
+    name: "About",
+  },
+  {
+    id: 5,
+    path: "#",
+    name: "Affiliates",
   },
 ];

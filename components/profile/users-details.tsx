@@ -33,7 +33,7 @@ const UsersDetails = ({
             {loading && <SkeletonText height={5} width={200} />}
             {!loading && (
               <h1 className="font-semibold text-base md:text-lg text-paper">
-                {user.Email}
+                {user.email}
               </h1>
             )}
           </div>
@@ -73,33 +73,6 @@ const UsersDetails = ({
                   ? "0.043btc"
                   : "No withdrawal please verify account"}
               </h1>
-            )}
-          </div>
-        </div>
-        {/* grid child 4 */}
-        <div className="my-2 p-4 font-sec flex items-center gap-6 bg-bg rounded shadow">
-          {loading && <SkeletonCircle width={50} height={50} />}
-          {!loading && (
-            <div className="bg-card p-3 md:p-5 rounded-full">
-              <RiLockPasswordLine className="text-base md:text-2xl" />
-            </div>
-          )}
-          <div>
-            <h2 className="font-medium text-base mb-1">Trading Password</h2>
-            {loading && <SkeletonText width={200} height={5} />}
-            {!loading && (
-              <div className="flex items-center gap-3">
-                <h1 className="font-bold text-base md:text-lg text-paper">
-                  {user.tradingPassword
-                    ? isShow
-                      ? user.tradingPassword
-                      : "xxxxx"
-                    : "N/A"}
-                </h1>
-                <button onClick={toggleShow}>
-                  {isShow ? <BsEye /> : <BsEyeSlash />}
-                </button>
-              </div>
             )}
           </div>
         </div>
