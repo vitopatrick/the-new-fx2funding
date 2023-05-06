@@ -19,7 +19,7 @@ export const useOrders = () => {
       // create collectionRef
       const collectionRef = collection(
         store,
-        "/users",
+        "/clients",
         `/${user.email}`,
         "/orders"
       );
