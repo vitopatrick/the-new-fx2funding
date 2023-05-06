@@ -60,6 +60,7 @@ const StepTwo = ({ move }: any) => {
         name: name,
         bonus: 0,
         plan: "N/A",
+        profit: 0,
       });
 
       // redirect users to the there dashboard

@@ -5,7 +5,6 @@ import { store } from "../../firebase";
 import { UserContext } from "../../context/UserContext";
 import { useRouter } from "next/router";
 import { toast } from "react-toastify";
-import { useFetchUser } from "../../hooks/useFetchUser";
 
 const DepositForm = () => {
   const [selectedCoin, setSelectedCoin] = useState<any | null | undefined>({});

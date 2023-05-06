@@ -28,6 +28,11 @@ const DashboardAccountCards = () => {
           amount={user?.bonus}
           loading={loading}
         />
+        <AmountCard
+          accountType={"Profit"}
+          amount={user?.profit}
+          loading={loading}
+        />
       </div>
     </section>
   );
