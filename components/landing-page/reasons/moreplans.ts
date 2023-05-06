@@ -29,4 +29,10 @@ export default [
     bonus: "$200",
     duration: "One Week",
   },
+  {
+    name: "Special Trades",
+    // range: "$21,000 - $99,000",
+    // bonus: "$200",
+    // duration: "One Week",
+  },
 ];
