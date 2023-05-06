@@ -10,13 +10,13 @@ const DepositHistory = () => {
   return (
     <div className="mx-3 text-white font-main">
       <div>
-        <h4 className="font-sec py-4 font-bold text-xl font-paper hover:underline cursor-pointer">
+        <h4 className="font-db underline py-4 font-bold text-xl font-paper hover:underline cursor-pointer">
           Deposit History
         </h4>
       </div>
       <div>
         {transactions.length <= 0 ? (
-          <div className="font-semibold flex items-center justify-center my-8 text-base text-gray_bg">
+          <div className="font-semibold flex items-center font-db justify-center my-8 text-base text-gray_bg">
             Opps Nothing here
           </div>
         ) : (
@@ -34,7 +34,7 @@ const HistoryTable = ({ transactions, loading }: any) => {
       {!loading && (
         <div>
           {/* parent div container */}
-          <div className="grid grid-cols-4 justify-items-center bg-bg p-2 font-sec font-bold rounded-t">
+          <div className="grid grid-cols-4 justify-items-center font-db bg-bg p-2 font-sec font-bold rounded-t">
             <div className="justify-self-start">Coin</div>
             <div className="justify-self-start">Amount</div>
             <div className="justify-self-start">Status</div>

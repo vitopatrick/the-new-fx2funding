@@ -40,9 +40,6 @@ const Sidebar = () => {
               <div className={textClasses(link.path)}>{link.label}</div>
             </Link>
           ))}
-        </div>
-        {/* second links flex container */}
-        <div>
           {SECOND_LINKS.map((link) => (
             <Link
               href={link.path}

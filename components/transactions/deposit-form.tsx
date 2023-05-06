@@ -54,7 +54,7 @@ const DepositForm = () => {
   };
 
   return (
-    <div className="mx-3 font-sec my-4">
+    <div className="mx-3 font-db my-4">
       {/* barcode image */}
       {!selectedCoin && <div />}
       {selectedCoin && (

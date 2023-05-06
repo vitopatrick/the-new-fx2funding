@@ -74,7 +74,7 @@ const UserModal = ({ hide, setHide }: UserModalTypes) => {
         }
       >
         {/* main div that will be center */}
-        <div className="w-[80%] md:w-[40%] mx-auto my-12 bg-bg rounded-md font-main relative shadow-md p-4">
+        <div className="w-[80%] md:w-[40%] mx-auto my-12 bg-bg rounded-md font-db relative shadow-md p-4">
           <div className="absolute top-0 right-0">
             <FaTimes
               className="text-white text-4xl mx-4 mt-6 cursor-pointer"

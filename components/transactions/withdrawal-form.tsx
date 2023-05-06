@@ -1,26 +1,12 @@
-import {
-  addDoc,
-  collection,
-  doc,
-  getDoc,
-  serverTimestamp,
-} from "firebase/firestore";
+import { addDoc, collection, serverTimestamp } from "firebase/firestore";
 import { useRouter } from "next/router";
 import { useContext, useState } from "react";
 import { UserContext } from "../../context/UserContext";
 import { store } from "../../firebase";
 import { toast } from "react-toastify";
 import ToggleButton from "./toggle";
-import TradingModal from "../../shared/modal/trading-modal";
 
-const coins = [
-  "Ethereum",
-  "Bitcoin",
-  "Tron",
-  "USDT TRC20",
-  "USDT ERC20",
-  "Solana",
-];
+const coins = ["Ethereum", "Bitcoin", "USDT"];
 
 const WithdrawalForm = () => {
   const [amount, setAmount] = useState<string | number>("");
@@ -30,15 +16,12 @@ const WithdrawalForm = () => {
   >(false);
   const [remarks, setRemarks] = useState<string>("");
   const [address, setAddress] = useState<string>("");
-  const [show, setShow] = useState(false);
 
   const { user: state }: any = useContext(UserContext);
 
   const router = useRouter();
 
-  const openModal = async (e: any) => {
-    e.preventDefault();
-    const person: any = await getDoc(doc(store, "/users", `${state.email}`));
+  const sendWithdrawal = async (e: any) => {
     if (!amount || !selectedCoin || !remarks) {
       toast("Please fill the form properly", {
         type: "error",
@@ -47,15 +30,11 @@ const WithdrawalForm = () => {
       });
       return;
     }
-    setShow(true);
-  };
-
-  const sendWithdrawal = async () => {
     try {
       // get the collection Ref
       const depositRef = collection(
         store,
-        "/users",
+        "/clients",
         `/${state.email}`,
         "/withdraw"
       );
@@ -69,7 +48,6 @@ const WithdrawalForm = () => {
         automatic_withdrawal: withdrawalType ? "on" : "off",
       });
 
-      setShow(false);
       router.reload();
     } catch (e: any) {
       toast(e.code, {
@@ -81,7 +59,7 @@ const WithdrawalForm = () => {
   };
 
   return (
-    <div className="mx-2 text-white font-main">
+    <div className="mx-2 text-white font-db">
       <h3 className="font-sec py-3 text-lg md:text-xl font-semibold">
         Withdraw Here
       </h3>
@@ -174,17 +152,12 @@ const WithdrawalForm = () => {
           <span>Automatic Withdrawal off/on</span>
         </div>
         <button
-          onClick={openModal}
+          onClick={sendWithdrawal}
           className="bg-bg rounded px-3 py-2 font-sec mt-2 w-full md:w-fit"
         >
           Send Request
         </button>
       </section>
-      <TradingModal
-        hide={show}
-        setHide={setShow}
-        tradingFunction={sendWithdrawal}
-      />
     </div>
   );
 };

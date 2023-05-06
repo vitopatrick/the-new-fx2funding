@@ -10,7 +10,7 @@ const UserVerification = ({ user, loading }: any) => {
         <div className="my-4">
           <button
             onClick={() => setHide(true)}
-            className="font-sec rounded-full block px-3 py-1 text-xs border-teal-500 border-[1px] font-bold text-teal-500"
+            className="font-db rounded-full block px-3 py-1 text-xs border-teal-500 border-[1px] font-bold text-teal-500"
           >
             Start verification
           </button>
