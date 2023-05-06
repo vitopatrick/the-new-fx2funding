@@ -11,8 +11,8 @@ const Navbar = () => {
     <>
       <nav className="bg-bg text-white">
         <div className="p-3 flex justify-between items-center font-lp">
-          <div className="p-3">
-            <img src="/logo.webp" alt="logo" className="w-[50%]" />
+          <div className="p-3 w-[8%]">
+            <img src="/logo.webp" alt="logo" />
           </div>
           <div className="space-x-8 text-lg capitalize hidden md:block">
             {links.map((link) => (
@@ -40,7 +40,7 @@ const Navbar = () => {
             </Link>
           </div>
           <div className="md:hidden block">
-            <Fa.FaBars size={45} onClick={() => setOpen(true)} />
+            <Fa.FaBars size={28} onClick={() => setOpen(true)} />
           </div>
         </div>
       </nav>
