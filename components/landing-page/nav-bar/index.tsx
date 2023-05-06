@@ -11,7 +11,7 @@ const Navbar = () => {
     <>
       <nav className="bg-bg text-white">
         <div className="p-3 flex justify-between items-center font-lp">
-          <div className="p-3 w-[8%]">
+          <div className="p-3 md:w-[8%] w-[24%]">
             <img src="/logo.webp" alt="logo" />
           </div>
           <div className="space-x-8 text-lg capitalize hidden md:block">

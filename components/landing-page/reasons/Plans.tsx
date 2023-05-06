@@ -5,10 +5,10 @@ import Link from "next/link";
 const Plans = () => {
   return (
     <section>
-      <div className="flex items-center justify-center bg-blue-600/30 p-4 w-[60%] mx-auto">
+      <div className="flex items-center justify-center bg-blue-600/30 p-4  md:w-[60%] w-[95%] mx-auto">
         <h4 className="text-blue-500">FX2 PROGRAMS</h4>
       </div>
-      <div className="flex items-center justify-center text-4xl my-6 md:placeholder:w-[40%] mx-auto text-center">
+      <div className="flex items-center justify-center md:text-4xl text-2xl my-6 md:placeholder:w-[40%] mx-auto text-center">
         <h4 className="font-bold">
           Choose the funded account that best suits your unique needs.
         </h4>
@@ -25,12 +25,12 @@ const Plans = () => {
         ))}
       </div>
       {/* plans end */}
-      <div className="md:placeholder:w-[40%] px-2 mx-auto text-xl italic leading-loose text-neutral-500 pb-32">
+      <div className="md:placeholder md:w-[40%] px-2 mx-auto md:text-xl text-base italic leading-loose text-neutral-500 pb-32">
         <p className="text-center">
           "FX2 Funding indeed offers exceptional attention to traders and I
           received my funded account within the day of passing their one step
           evaluation. Their distinction is also allowing more freedom in trading
-          - no stoploss requirement, news trading restriction, weekend trading
+          - no stop loss requirement, news trading restriction, weekend trading
           is allowed, plus also no limits to lot size restriction apart from
           available margin."
         </p>
@@ -45,7 +45,7 @@ const Plans = () => {
 const Card = ({ name, range, bonus, duration }: any) => {
   return (
     <div className="w-full max-w-sm p-4 bg-white border border-gray-200 rounded-lg shadow sm:p-8 dark:bg-gray-800 dark:border-gray-700">
-      <h5 className="mb-4 text-xl font-medium text-gray-500 dark:text-gray-400">
+      <h5 className="mb-4 md:text-xl text-lg font-medium text-gray-500 dark:text-gray-400">
         {name}
       </h5>
       <div className="f dark:text-white">
@@ -101,7 +101,7 @@ const Card = ({ name, range, bonus, duration }: any) => {
       <Link
         href="/auth/sign-up"
         type="button"
-        className="text-white bg-blue-600 hover:bg-blue-700 focus:ring-4 focus:outline-none focus:ring-blue-200 dark:focus:ring-blue-900 font-medium rounded-lg text-sm px-5 py-2.5 inline-flex justify-center w-full text-center"
+        className="text-white bg-blue-600 hover:bg-blue-700 focus:ring-4 focus:outline-none focus:ring-blue-200 dark:focus:ring-blue-900 font-medium rounded-lg text-sm p-4 inline-flex justify-center w-full text-center"
       >
         Choose plan
       </Link>

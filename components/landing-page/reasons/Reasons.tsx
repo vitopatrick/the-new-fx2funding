@@ -12,10 +12,10 @@ const Reasons = () => {
     >
       <div className="p-4">
         <div className="flex items-center justify-center flex-col gap-4 pt-8 my-4">
-          <h4 className="md:text-6xl text-4xl font-bold md:w-[60%] text-center">
+          <h4 className="md:text-6xl text-2xl font-bold md:w-[60%] text-center">
             The game-changing prop firm that puts traders first.
           </h4>
-          <p className="text-xl text-neutral-500">
+          <p className="text-lgg text-neutral-500 text-center">
             FX2 has one mission - to help you grow your wealth.
           </p>
         </div>
@@ -26,7 +26,7 @@ const Reasons = () => {
                 <img src={reason.icon} alt="logo" />
                 <h4 className="font-bold">{reason.title}</h4>
               </div>
-              <div className="text-neutral-500">
+              <div className="text-neutral-500 text-base md:text-lg">
                 <p>{reason.subtitle}</p>
               </div>
             </div>

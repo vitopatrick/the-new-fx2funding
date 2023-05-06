@@ -169,7 +169,7 @@ const Footer = () => {
             </a>
           ))}
         </div>
-        <div className=" w-[200px] mx-auto">
+        <div className="w-[50%] mx-auto">
           <img
             src="https://fx2funding.com/wp-content/uploads/2022/12/traders-first-1.jpg"
             alt=""
