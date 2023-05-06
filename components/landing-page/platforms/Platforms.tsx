@@ -8,7 +8,7 @@ const Platforms = () => {
         <h4 className="my-8 text-2xl text-neutral-400 text-center font-bold">
           Compare FX2 Funding to Other Platforms
         </h4>
-        <div className="w-[70%] mx-auto">
+        <div className="md:w-[70%] w-[90%] mx-auto">
           <img src="/chart.png" alt="" />
         </div>
       </div>
