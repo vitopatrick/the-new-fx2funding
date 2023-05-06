@@ -33,7 +33,8 @@ export const useFetchUser = () => {
           setUserState({ ...doc.data(), meta: doc.metadata });
         },
         (error) => {
-          console.log(error.message);
+          
+          setError(error.message);
         }
       );
     };

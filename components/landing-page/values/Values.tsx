@@ -7,11 +7,12 @@ const Values = () => {
       style={{
         background: `url(https://fx2funding.com/wp-content/uploads/2022/11/bg-img_04.jpg)`,
         position: "relative",
-        minHeight: "100vh",
+        overflow: "hidden",
       }}
+      className="h-[180vh] md:h-[120vh]"
     >
       <div className="absolute w-full h-full top-0 left-0 bg-black/70">
-        <div className="md:w-[60%] mx-auto my-40">
+        <div className="md:w-[60%] w-[90%] mx-auto md:my-40 my-10">
           <h4 className="p-4 bg-[#0074db]/30 text-[#0084ff] font-semibold">
             FX2 PIPS VALUES
           </h4>

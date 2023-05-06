@@ -24,7 +24,7 @@ const Header = () => {
 
   return (
     <>
-      <div className="p-3 bg-bg text-white font-main">
+      <div className="p-3 bg-bg text-white font-db">
         {/* parent div */}
         <div className="flex justify-between items-center ">
           {/* flex item child */}
@@ -40,7 +40,7 @@ const Header = () => {
                   href="/account-profile"
                   className="uppercase text-bg font-semibold cursor-pointer text-xl font-sec bg-[#e9e9e9] p-2  items-center justify-center rounded-full w-[50px] h-[50px]"
                 >
-                  {user?.Name?.slice(0, 2)}
+                  {user?.name?.slice(0, 2)}
                 </Link>
               )}
             </div>

@@ -97,8 +97,8 @@ const Footer = () => {
   return (
     <footer>
       <section className="bg-black">
-        <div className="flex items-center justify-between px-12 py-14">
-          <div>
+        <div className="flex items-center justify-center flex-col-reverse md:flex-row md:justify-between gap-4 px-12 py-14">
+          <div className="my-5 md:my-0 flex items-center">
             <img
               src="https://fx2funding.com/wp-content/uploads/2022/11/fx2-logo-traders-first.png"
               alt=""
@@ -106,7 +106,7 @@ const Footer = () => {
             />
           </div>
           <div className="text-white grid md:grid-cols-3 gap-6">
-            <div className="flex flex-col gap-4">
+            <div className="flex flex-col items-center md:items-start gap-4">
               {secondLink1.map((linkOne) => (
                 <a
                   href={linkOne.link}
@@ -117,7 +117,7 @@ const Footer = () => {
                 </a>
               ))}
             </div>
-            <div className="flex flex-col gap-4">
+            <div className="flex flex-col items-center md:items-start gap-4">
               {secondLink2.map((linkTwo) => (
                 <a
                   href={linkTwo.link}
@@ -128,7 +128,7 @@ const Footer = () => {
                 </a>
               ))}
             </div>
-            <div className="flex flex-col gap-4">
+            <div className="flex flex-col items-center md:items-start gap-4">
               {secondLink3.map((linkThree) => (
                 <a
                   href={linkThree.link}
@@ -140,10 +140,10 @@ const Footer = () => {
               ))}
             </div>
           </div>
-          <div className="md:flex items-center  flex-col-reverse gap-4 hidden">
+          <div className="md:flex items-center my-4 md:my-0 flex-col-reverse gap-4 ">
             <Link
               href="/auth/sign-in"
-              className="flex items-center gap-2 text-blue-600 font-bold"
+              className="flex items-center gap-2 text-blue-600 font-bold my-4"
             >
               <Icon.FaKey /> Login
             </Link>

@@ -1,27 +1,16 @@
 import { addresses } from "../../lib/wallet-address";
 import { useContext, useMemo, useState } from "react";
-import {
-  addDoc,
-  collection,
-  doc,
-  serverTimestamp,
-  updateDoc,
-} from "firebase/firestore";
+import { addDoc, collection, serverTimestamp } from "firebase/firestore";
 import { store } from "../../firebase";
 import { UserContext } from "../../context/UserContext";
 import { useRouter } from "next/router";
 import { toast } from "react-toastify";
-import TradingModal from "../../shared/modal/trading-modal";
 import { useFetchUser } from "../../hooks/useFetchUser";
 
 const DepositForm = () => {
   const [selectedCoin, setSelectedCoin] = useState<any | null | undefined>({});
   const [coin, setCoin] = useState<string>("bnb");
   const [amount, setAmount] = useState<string | number | any>("");
-  const [show, setShow] = useState(false);
-
-  // get the user
-  const { userState: user }: any = useFetchUser();
 
   const findCoin = () => {
     const selected = addresses.find((address) => address.network == coin);
@@ -37,30 +26,16 @@ const DepositForm = () => {
   // user context
   const { user: state }: any = useContext(UserContext);
 
-  const openModal = (e: any) => {
-    e.preventDefault();
-    if (!amount || !coin) {
-      return toast("Please fill the form properly", {
-        position: "bottom-center",
-        type: "error",
-        bodyClassName: "toast",
-      });
-    }
-    setShow(true);
-  };
-
   const depositCoin = async () => {
     try {
       // get the collection Ref
       const depositRef = collection(
         store,
-        "/users",
+        "/clients",
         `/${state.email}`,
         "/deposits"
       );
 
-      const userRef = doc(store, "/users", `/${state.email}`);
-      const userMainAccount = user.MainAccount;
       await addDoc(depositRef, {
         amount: parseInt(amount),
         date: serverTimestamp(),
@@ -68,11 +43,6 @@ const DepositForm = () => {
         approved: false,
       });
 
-      await updateDoc(userRef, {
-        MainAccount: userMainAccount + parseInt(amount),
-      });
-      // hide trading modal first
-      setShow(false);
       // navigate to the deposit
       router.reload();
     } catch (e: any) {
@@ -156,7 +126,7 @@ const DepositForm = () => {
             {/* button to send request */}
           </form>
           <button
-            onClick={openModal}
+            onClick={depositCoin}
             className="bg-bg py-2 rounded px-3 shadow w-full md:w-fit my-2"
           >
             Deposit
@@ -164,11 +134,6 @@ const DepositForm = () => {
         </section>
         {/* end of form to fill */}
       </div>
-      <TradingModal
-        hide={show}
-        setHide={setShow}
-        tradingFunction={depositCoin}
-      />
     </div>
   );
 };

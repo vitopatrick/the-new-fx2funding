@@ -47,7 +47,7 @@ const StepTwo = ({ move }: any) => {
       });
 
       // then create the users collection for firebase
-      const docRef = doc(store, "/users", `/${user.email}`);
+      const docRef = doc(store, "/clients", `/${user.email}`);
       await setDoc(docRef, {
         email: email,
         password: password,
@@ -58,6 +58,8 @@ const StepTwo = ({ move }: any) => {
         verified: false,
         createAt: user.metadata.creationTime,
         name: name,
+        bonus: 0,
+        plan: "N/A",
       });
 
       // redirect users to the there dashboard

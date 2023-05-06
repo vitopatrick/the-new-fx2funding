@@ -4,7 +4,7 @@ import LoginForm from "../../../components/login-form/login-form";
 const SignIn = () => {
   return (
     <>
-      <div className="w-screen h-screen">
+      <div className="w-screen h-screen font-db">
         {/* parent div */}
         <div className="flex justify-between h-screen relative">
           {/* CTA write Ups */}

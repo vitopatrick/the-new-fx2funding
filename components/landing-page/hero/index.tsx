@@ -5,10 +5,9 @@ const Hero = () => {
     <section
       style={{
         background: `url('https://fx2funding.com/wp-content/uploads/2023/04/lp-hero-img-2.jpg')`,
-
         position: "relative",
-        height: "80vh",
       }}
+      className="h-[50vh] md:h-[80vh]"
     >
       <div
         style={{
@@ -22,7 +21,7 @@ const Hero = () => {
         }}
       >
         <div className="w-[90%] mx-auto flex">
-          <div className="text-white self-center space-y-4  text-center md:text-left">
+          <div className="text-white capitalize self-center flex-col md:flex-row justify-self-center space-y-4  text-center md:text-left">
             <h4 className="md:text-8xl font-bold text-4xl">
               A trader like you deserves to be funded.
             </h4>

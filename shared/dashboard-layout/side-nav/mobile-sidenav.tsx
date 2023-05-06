@@ -8,15 +8,14 @@ const MobileSideNav = ({ hide, setHide }: any) => {
 
   const boxClasses = (url: any) =>
     clsx({
-      ["font-sec text-button font-main flex gap-1 items-center my-6 pl-4"]:
-        true,
+      ["font-db text-button font-main flex gap-1 items-center my-6 pl-4"]: true,
       ["bg-bg w-full py-2 pl-2 rounded-lg "]: pathname === url,
     });
 
   const textClasses = (url: any) =>
     clsx({
-      ["font-main"]: true,
-      ["font-main font-semibold text-orange-200"]: pathname === url,
+      ["font-db"]: true,
+      ["font-db font-semibold text-orange-200"]: pathname === url,
     });
 
   return (
@@ -34,8 +33,8 @@ const MobileSideNav = ({ hide, setHide }: any) => {
           {/* first links flex container */}
           <div>
             {/* logo flex container */}
-            <div className="mb-8 font-sec font-bold text-button uppercase font-main text-xl">
-              Coins Exchange
+            <div className="mb-8 font-bold text-button uppercase font-main text-xl">
+              <img src="/logo.webp" alt="logo" className="w-[50%] p-2" />
             </div>
             {FIRST_LINKS.map((link) => (
               <Link

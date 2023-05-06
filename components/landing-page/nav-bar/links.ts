@@ -6,12 +6,12 @@ export const links = [
   },
   {
     id: 2,
-    path: "#",
+    path: "https://fx2funding.com/faq/",
     name: "FAQ",
   },
   {
     id: 3,
-    path: "#",
+    path: "https://fx2funding.com/blog/",
     name: "Blog",
   },
   {
@@ -21,7 +21,49 @@ export const links = [
   },
   {
     id: 5,
-    path: "#",
+    path: "https://fx2funding.com/affiliate-program/",
     name: "Affiliates",
   },
 ];
+
+export const fundingLinks = [
+  {
+    name: "Funding Programs",
+    path: "#",
+  },
+  {
+    name: "Evaluation Process",
+    path: "#",
+  },
+  {
+    name: "Trading Rules",
+    path: "#",
+  },
+  {
+    name: "Scaling Plan",
+    path: "#",
+  },
+];
+
+export const aboutLinks = [
+  {
+    name: "About Us",
+    path: "#",
+  },
+  {
+    name: "Contact",
+    path: "#",
+  },
+  {
+    name: "Affiliates",
+    path: "#",
+  },
+  {
+    name: "FAQ",
+    path: "#",
+  },
+  {
+    name: "Blog",
+    path: "#",
+  },
+]; 

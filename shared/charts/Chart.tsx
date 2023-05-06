@@ -19,7 +19,7 @@ const Chart = () => {
   const { coin, loading } = useFetchAllCoin(selected, 30);
 
   return (
-    <div className="p-4 bg-bg text-white font-main rounded flex-1 items-stretch">
+    <div className="p-4 bg-bg text-white font-db rounded flex-1 items-stretch">
       {/* selector */}
       <div className="mb-8 flex items-center justify-between">
         <div className="bg-card py-1 px-2 rounded focus:border-paper focus:border-[1px]">

@@ -8,15 +8,15 @@ const Sidebar = () => {
 
   const boxClasses = (url: any) =>
     clsx({
-      ["font-sec text-orange-100 font-main flex gap-1 items-center my-6 pl-4"]:
+      ["font-db text-orange-100 font-main flex gap-1 items-center my-6 pl-4"]:
         true,
       ["bg-bg w-full py-2 pl-2 rounded-lg "]: pathname === url,
     });
 
   const textClasses = (url: any) =>
     clsx({
-      ["font-sec"]: true,
-      ["font-sec font-semibold text-orange-300"]: pathname === url,
+      ["font-db"]: true,
+      ["font-db font-semibold text-orange-300"]: pathname === url,
     });
 
   return (

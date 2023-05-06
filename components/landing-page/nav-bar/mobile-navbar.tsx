@@ -1,32 +1,65 @@
 import Link from "next/link";
-import { FaTimes } from "react-icons/fa";
-import { links } from "./links";
+import * as Fa from "react-icons/fa";
+import { aboutLinks, fundingLinks, links } from "./links";
 
 const MobileNavbar = ({ show, close }: any) => {
   return (
     <nav
       className={
         show
-          ? "absolute top-0 left-0 backdrop-blur bg-text_main/40 w-full h-screen z-30"
+          ? "absolute block md:hidden top-0 left-0 w-full min-h-screen bg-bg text-white z-30"
           : "hidden"
       }
     >
       <div className="absolute top-0 right-0 p-4">
-        <FaTimes
+        <Fa.FaTimes
           onClick={() => close(false)}
           className="text-3xl fill-white cursor-pointer"
         />
       </div>
-      <div className="flex flex-col gap-4 p-4 mt-10">
-        {links.map((link: any) => (
+      <div className="p-4">
+        <Link
+          href="/auth/sign-in"
+          className="flex items-center text-blue-500 gap-4 font-semibold"
+        >
+          <Fa.FaKey /> Login
+        </Link>
+        <div className="my-10">
+          <h4 className="text-center text-neutral-600">How funding Works</h4>
+          <div className="flex flex-col items-center mt-5 justify-center gap-4">
+            {fundingLinks.map((fundLink) => (
+              <Link
+                href={fundLink.path}
+                key={fundLink.name}
+                className="text-2xl text-neutral-400 hover:text-blue-500 ease-in"
+              >
+                {fundLink.name}
+              </Link>
+            ))}
+          </div>
+        </div>
+        <div className="my-10">
+          <h4 className="text-center text-neutral-600">About FX2</h4>
+          <div className="flex flex-col items-center mt-5 justify-center gap-4">
+            {aboutLinks.map((aboutLink) => (
+              <Link
+                href={aboutLink.path}
+                key={aboutLink.name}
+                className="text-2xl text-neutral-400 hover:text-blue-500 ease-in"
+              >
+                {aboutLink.name}
+              </Link>
+            ))}
+          </div>
+        </div>
+        <div className="flex items-center justify-center">
           <Link
-            href={`/${link.path}`}
-            key={link.id}
-            className="capitalize text-4xl my-6 font-light hover:text-teal-400 hover:underline"
+            href="/auth/sign-up"
+            className="font-semibold p-3 bg-blue-500 rounded"
           >
-            {link.name}
+            Get funded
           </Link>
-        ))}
+        </div>
       </div>
     </nav>
   );

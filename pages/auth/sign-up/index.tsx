@@ -10,7 +10,7 @@ const SignUp = () => {
   return (
     <FormProvider>
       {/* page Wrapper class */}
-      <div className="w-screen h-screen">
+      <div className="w-screen h-screen font-db">
         {/* parent div container */}
         <div className="flex justify-between h-screen relative">
           {/* CTA Markups */}

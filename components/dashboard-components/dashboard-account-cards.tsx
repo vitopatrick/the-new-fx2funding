@@ -8,7 +8,7 @@ const DashboardAccountCards = () => {
   console.log(user);
   return (
     <section>
-      <div className="py-3 px-1 font-main text-white font-semibold text-xl">
+      <div className="py-3 px-1 font-main text-white font-semibold text-xl font-db">
         Account Summary
       </div>
 
@@ -21,6 +21,11 @@ const DashboardAccountCards = () => {
         <AmountCard
           accountType={"Deposited"}
           amount={user?.deposited}
+          loading={loading}
+        />
+        <AmountCard
+          accountType={"Bonus"}
+          amount={user?.bonus}
           loading={loading}
         />
       </div>

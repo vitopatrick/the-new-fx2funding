@@ -12,9 +12,9 @@ interface TableProps {
 const TableItem = ({ name, price, change, img, symbol }: TableProps) => {
   const classColor = (isLower: number) =>
     clsx({
-      ["font-sec font-medium py-4 hidden md:block"]: true,
-      ["font-sec font-medium text-red-400"]: isLower < 0,
-      ["font-sec font-medium py-4 text-teal-400"]: isLower > 0,
+      ["font-num font-medium py-4 hidden md:block"]: true,
+      ["font-num font-medium text-red-400"]: isLower < 0,
+      ["font-num font-medium py-4 text-teal-400"]: isLower > 0,
     });
 
   return (
@@ -23,9 +23,9 @@ const TableItem = ({ name, price, change, img, symbol }: TableProps) => {
         <div className="w-[12%] md:w-[6%]">
           <img src={img} alt={name} />
         </div>
-        <div className="font-sec font-bold text-paper">{name}</div>
+        <div className="font-db font-bold text-paper">{name}</div>
       </div>
-      <div className="font-sec  py-3 font-bold text-paper uppercase hidden md:block">
+      <div className="font-db  py-3 font-bold text-paper uppercase hidden md:block">
         {symbol}
       </div>
       <div className={classColor(change)}>{change.toFixed(2)}%</div>
