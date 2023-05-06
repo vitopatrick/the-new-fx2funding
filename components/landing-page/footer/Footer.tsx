@@ -148,7 +148,7 @@ const Footer = () => {
               <Icon.FaKey /> Login
             </Link>
             <Link
-              href="/auth/sign-in"
+              href="/auth/sign-up"
               className="text-white bg-blue-600 rounded shadow-md font-bold p-2"
             >
               Get funded
