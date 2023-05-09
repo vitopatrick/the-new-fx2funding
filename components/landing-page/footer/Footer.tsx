@@ -44,17 +44,17 @@ const secondLink1 = [
   {
     id: 1,
     name: "Funding Program",
-    link: "https://fx2funding.com/programs/",
+    link: "/funding",
   },
   {
     id: 2,
     name: "Affiliates",
-    link: "https://fx2funding.com/affiliate-program/",
+    link: "/share",
   },
   {
     id: 3,
     name: "Evaluation Process",
-    link: "https://fx2funding.com/evaluation-process/",
+    link: "/process",
   },
 ];
 
@@ -62,34 +62,34 @@ const secondLink2 = [
   {
     id: 4,
     name: "About Us",
-    link: "https://fx2funding.com/about-us/",
+    link: "/about",
   },
   {
     id: 5,
     name: "FAQ",
-    link: "https://fx2funding.com/contact/",
+    link: "/faq",
   },
   {
     id: 6,
     name: "Trading Rules",
-    link: "https://fx2funding.com/programs/",
+    link: "/rules",
   },
 ];
 const secondLink3 = [
   {
     id: 7,
     name: "Contact",
-    link: "https://fx2funding.com/contact/",
+    link: "/contact",
   },
   {
     id: 8,
     name: "Blog",
-    link: "https://fx2funding.com/blog/",
+    link: "/articles",
   },
   {
     id: 9,
     name: "Scaling Plan",
-    link: "https://fx2funding.com/scaling-plan/",
+    link: "/scaling-plan",
   },
 ];
 
@@ -108,35 +108,32 @@ const Footer = () => {
           <div className="text-white grid md:grid-cols-3 gap-6">
             <div className="flex flex-col items-center md:items-start gap-4">
               {secondLink1.map((linkOne) => (
-                <a
+                <Link
                   href={linkOne.link}
-                  target="_blank"
                   className="text-neutral-600 hover:text-blue-500 ease-in"
                 >
                   {linkOne.name}
-                </a>
+                </Link>
               ))}
             </div>
             <div className="flex flex-col items-center md:items-start gap-4">
               {secondLink2.map((linkTwo) => (
-                <a
+                <Link
                   href={linkTwo.link}
-                  target="_blank"
                   className="text-neutral-600 hover:text-blue-500 ease-in"
                 >
                   {linkTwo.name}
-                </a>
+                </Link>
               ))}
             </div>
             <div className="flex flex-col items-center md:items-start gap-4">
               {secondLink3.map((linkThree) => (
-                <a
+                <Link
                   href={linkThree.link}
-                  target="_blank"
                   className="text-neutral-600 hover:text-blue-500 ease-in"
                 >
                   {linkThree.name}
-                </a>
+                </Link>
               ))}
             </div>
           </div>
@@ -159,14 +156,14 @@ const Footer = () => {
       <section className="bg-[#141414] p-12">
         <div className="flex items-center justify-center gap-6">
           {socialMedia.map((item) => (
-            <a
+            <Link
               href={item.link}
               target="_blank"
               key={item.id}
               className="text-2xl text-neutral-400 hover:text-blue-500"
             >
               {item.icon}
-            </a>
+            </Link>
           ))}
         </div>
         <div className="w-[50%] mx-auto">

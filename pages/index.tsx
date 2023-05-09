@@ -1,16 +1,16 @@
+import Layout from "../components/Layout/Layout";
 import Articles from "../components/landing-page/articles/Articles";
 import BuyBook from "../components/landing-page/buy-book/BuyBook";
-import Footer from "../components/landing-page/footer/Footer";
+// import Footer from "../components/landing-page/footer/Footer";
 import Hero from "../components/landing-page/hero";
-import Navbar from "../components/landing-page/nav-bar";
+// import Navbar from "../components/landing-page/nav-bar";
 import Platforms from "../components/landing-page/platforms/Platforms";
-import Process from "../components/landing-page/process/Process";
+// import Process from "../components/landing-page/process/Process";
 import Reasons from "../components/landing-page/reasons/Reasons";
 import Values from "../components/landing-page/values/Values";
 export default function Home() {
   return (
-    <div className="bg-bg min-h-screen font-lp">
-      <Navbar />
+    <Layout>
       <Hero />
       <Reasons />
       {/* <Process /> */}
@@ -19,7 +19,6 @@ export default function Home() {
       <BuyBook />
       <Values />
       <Articles />
-      <Footer />
-    </div>
+    </Layout>
   );
 }

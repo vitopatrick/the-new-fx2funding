@@ -3,7 +3,7 @@ import React from "react";
 
 const Platforms = () => {
   return (
-    <section>
+    <section className="bg-black text-white">
       <div className="p-6">
         <h4 className="my-8 text-2xl text-neutral-400 text-center font-bold">
           Compare FX2 Funding to Other Platforms

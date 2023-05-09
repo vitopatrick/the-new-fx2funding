@@ -1,17 +1,14 @@
 import React from "react";
-import AboutOurMission from "../../components/about/about-our-mission";
-import AboutWelcome from "../../components/about/about-welcome";
-import Footer from "../../components/landing-page/footer/Footer";
-import Navbar from "../../components/landing-page/nav-bar";
+import Layout from "../../components/Layout/Layout";
+import Values from "../../components/landing-page/values/Values";
+import AboutHero from "../../components/about/AboutHero";
 
 const AboutUs = () => {
   return (
-    <div className="bg-bg">
-      <Navbar />
-      <AboutWelcome />
-      <AboutOurMission />
-      <Footer />
-    </div>
+    <Layout>
+      <AboutHero />
+      <Values />
+    </Layout>
   );
 };
 

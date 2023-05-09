@@ -18,7 +18,6 @@ const Navbar = () => {
             {links.map((link) => (
               <Link
                 href={link.path}
-                target="_blank"
                 className="hover:text-blue-500 ease-in-out"
               >
                 {link.name}

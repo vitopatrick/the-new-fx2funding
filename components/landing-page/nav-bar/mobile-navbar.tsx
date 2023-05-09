@@ -1,6 +1,6 @@
 import Link from "next/link";
 import * as Fa from "react-icons/fa";
-import { aboutLinks, fundingLinks, links } from "./links";
+import { aboutLinks, fundingLinks } from "./links";
 
 const MobileNavbar = ({ show, close }: any) => {
   return (
