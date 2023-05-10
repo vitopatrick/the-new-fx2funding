@@ -3,7 +3,7 @@ import thearticles from "./thearticles";
 
 const Articles = () => {
   return (
-    <section className="bg-neutral-900 p-4 pb-32 text-white h-[320vh] md:h-[100vh]">
+    <section className="bg-neutral-900 p-4 pb-32 text-white">
       <div>
         <h4 className="text-center p-4 text-2xl font-semibold">Article</h4>
         <div className="md:w-[70%] w-full p-2 mx-auto flex items-center md:flex-row flex-col gap-6 mt-8">

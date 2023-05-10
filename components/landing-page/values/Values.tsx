@@ -6,13 +6,13 @@ const Values = () => {
     <section
       style={{
         background: `url(https://fx2funding.com/wp-content/uploads/2022/11/bg-img_04.jpg)`,
-        position: "relative",
-        overflow: "hidden",
+        backgroundSize: "cover",
+        backgroundRepeat: "repeat",
+        width: "100%",
       }}
-      className="h-[250vh] md:h-[120vh]"
     >
-      <div className="absolute w-full h-full top-0 left-0 bg-black/70">
-        <div className="md:w-[60%] w-[95%] mx-auto md:my-40 my-10">
+      <div className="bg-black/60">
+        <div className="md:w-[60%] w-[95%] mx-auto py-20">
           <h4 className="p-4 bg-[#0074db]/30 text-[#0084ff] font-semibold">
             FX2 PIPS VALUES
           </h4>
@@ -29,7 +29,7 @@ const Values = () => {
                     {value.name}
                   </h4>
                 </div>
-                <h4 className="md:text-xl text-sm leading-loose text-neutral-400">
+                <h4 className="md:text-xl text-md leading-loose text-neutral-400">
                   {value.about}
                 </h4>
               </div>
