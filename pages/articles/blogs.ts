@@ -1,4 +1,4 @@
-export default [
+export const blogs = [
   {
     id: 1,
     title: "Swing Trading in Forex: Tips and Strategies",

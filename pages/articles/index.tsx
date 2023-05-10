@@ -1,6 +1,6 @@
 import React from "react";
 import Layout from "../../components/Layout/Layout";
-import blogs from "./blogs";
+import { blogs } from "./blogs";
 
 const ArticlesPage = () => {
   return (
