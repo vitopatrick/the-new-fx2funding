@@ -22,8 +22,8 @@ const FundingBody = () => {
         </div>
         <div className="grid md:grid-cols-3 mt-10 gap-4">
           {moreplans.map((plan) => (
-            <div className="w-full max-w-sm p-4 bg-white border border-gray-200 rounded-lg shadow sm:p-8 dark:bg-gray-800 dark:border-gray-700">
-              <h5 className="mb-4 md:text-xl text-lg font-medium text-gray-500 dark:text-gray-400">
+            <div className="w-full max-w-sm p-4 bg-gray-800 border border-gray-200 rounded-lg shadow sm:p-8">
+              <h5 className="mb-4 md:text-xl text-lg font-medium text-gray-500">
                 {plan.name}
               </h5>
               <div className="f dark:text-white">

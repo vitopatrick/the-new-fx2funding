@@ -44,7 +44,7 @@ const Plans = () => {
 
 const Card = ({ name, range, bonus, duration }: any) => {
   return (
-    <div className="w-full max-w-sm p-4 bg-white border border-gray-200 rounded-lg shadow sm:p-8 dark:bg-gray-800 dark:border-gray-700">
+    <div className="w-full max-w-sm p-4 bg-gray-800 border border-gray-200 rounded-lg shadow sm:p-8">
       <h5 className="mb-4 md:text-xl text-lg font-medium text-gray-500 dark:text-gray-400">
         {name}
       </h5>
