@@ -17,7 +17,7 @@ const ArticlesPage = () => {
                     backgroundSize: "cover",
                     backgroundPosition: "center",
                   }}
-                  className="h-[300px] bg-red-500"
+                  className="h-[220px] bg-neutral-400"
                 ></div>
                 <div className="space-y-4 mt-3">
                   <h4 className="font-bold text-2xl">{blog.title}</h4>

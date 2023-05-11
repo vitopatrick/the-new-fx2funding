@@ -98,7 +98,7 @@ const Footer = () => {
     <footer>
       <section className="bg-black">
         <div className="flex items-center justify-center flex-col-reverse md:flex-row md:justify-between gap-4 px-12 py-14">
-          <div className="my-5 md:my-0 flex items-center">
+          <div className="my-5 md:my-0 flex items-center justify-center">
             <img
               src="https://fx2funding.com/wp-content/uploads/2022/11/fx2-logo-traders-first.png"
               alt=""
@@ -154,7 +154,7 @@ const Footer = () => {
         </div>
       </section>
       <section className="bg-[#141414] p-12">
-        <div className="flex items-center justify-center gap-6">
+        {/* <div className="flex items-center justify-center gap-6">
           {socialMedia.map((item) => (
             <Link
               href={item.link}
@@ -165,8 +165,8 @@ const Footer = () => {
               {item.icon}
             </Link>
           ))}
-        </div>
-        <div className="w-[50%] mx-auto">
+        </div> */}
+        <div className="flex items-center justify-center">
           <img
             src="https://fx2funding.com/wp-content/uploads/2022/12/traders-first-1.jpg"
             alt=""
