@@ -39,7 +39,6 @@ const UserModal = ({ hide, setHide }: UserModalTypes) => {
       // update the document
       const userRef = doc(store, "/clients", `${state.email}`);
       await updateDoc(userRef, {
-        verfied: true,
         address: homeAddress,
       });
       // hide modal
