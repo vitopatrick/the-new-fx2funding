@@ -14,7 +14,7 @@ const Plans = () => {
         </h4>
       </div>
       {/* plans start */}
-      <div className="grid md:grid-cols-3 gap-5 overflow-x-scroll w-[90%] mx-auto  my-12">
+      <div className="grid md:grid-cols-3 justify-items-center gap-5 w-[90%] mx-auto my-12">
         {moreplans.map((plans) => (
           <Card
             name={plans.name}
@@ -25,7 +25,7 @@ const Plans = () => {
         ))}
       </div>
       {/* plans end */}
-      <div className="md:placeholder md:w-[40%] px-2 mx-auto md:text-xl text-base italic leading-loose text-neutral-500 pb-32">
+      <div className="md:placeholder md:w-[40%]  px-2 mx-auto md:text-xl text-base italic leading-loose text-neutral-500 pb-32">
         <p className="text-center">
           "FX2 Funding indeed offers exceptional attention to traders and I
           received my funded account within the day of passing their one step
@@ -44,12 +44,14 @@ const Plans = () => {
 
 const Card = ({ name, range, bonus, duration }: any) => {
   return (
-    <div className="w-full max-w-sm p-4 bg-gray-800 border border-gray-200 rounded-lg shadow sm:p-8">
+    <div className="w-full max-w-sm p-4 font-lp bg-gray-800 rounded-lg shadow sm:p-8">
       <h5 className="mb-4 md:text-xl text-lg font-medium text-gray-500 dark:text-gray-400">
         {name}
       </h5>
-      <div className="f dark:text-white">
-        <span className="text-4xl font-extrabold tracking-tight">{range}</span>
+      <div className="dark:text-white">
+        <span className="text-4xl font-extrabold font-num tracking-tight">
+          {range}
+        </span>
       </div>
       {/* <!-- List --> */}
       <ul role="list" className="space-y-5 my-7">
