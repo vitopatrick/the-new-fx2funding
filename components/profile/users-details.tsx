@@ -10,12 +10,6 @@ const UsersDetails = ({
   user,
   loading,
 }: UserType | null | {} | undefined | any) => {
-  const [isShow, setIsShow] = useState(false);
-
-  const toggleShow = () => {
-    setIsShow(!isShow);
-  };
-
   return (
     <>
       {/* parent grid container */}
@@ -51,7 +45,7 @@ const UsersDetails = ({
             {loading && <SkeletonText height={5} width={200} />}
             {!loading && (
               <h1 className="font-semibold text-base md:text-lg text-paper">
-                {user.verfied ? "Verified" : "Not Verified"}
+                {user.verified ? "Verified" : "Not Verified"}
               </h1>
             )}
           </div>

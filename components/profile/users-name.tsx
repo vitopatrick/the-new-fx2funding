@@ -32,7 +32,7 @@ const UsersName = ({
                   : "text-sm font-semibold text-red-400 capitalize"
               }
             >
-              {user.verfied ? "Verified" : "Not Verified"}
+              {user.verified ? "Verified" : "Not Verified"}
             </h2>
           )}
         </div>
