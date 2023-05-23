@@ -4,16 +4,15 @@ import { useContext, useState } from "react";
 import { UserContext } from "../../context/UserContext";
 import { store } from "../../firebase";
 import { toast } from "react-toastify";
-import ToggleButton from "./toggle";
+import WithdrawalModal from "./WithdrawalModal";
 
 const coins = ["Ethereum", "Bitcoin", "USDT"];
 
 const WithdrawalForm = () => {
   const [amount, setAmount] = useState<string | number>("");
   const [selectedCoin, setSelectedCoin] = useState<string | number>("");
-  const [withdrawalType, setWithdrawalType] = useState<
-    string | number | boolean
-  >(false);
+  const [bankWithdrawalModal, setBankWithdrawalModal] =
+    useState<boolean>(false);
   const [remarks, setRemarks] = useState<string>("");
   const [address, setAddress] = useState<string>("");
 
@@ -45,7 +44,6 @@ const WithdrawalForm = () => {
         approved: false,
         remarks,
         address,
-        automatic_withdrawal: withdrawalType ? "on" : "off",
       });
 
       router.reload();
@@ -147,9 +145,13 @@ const WithdrawalForm = () => {
             </div>
           </div>
         </form>
-        <div className="flex items-center gap-2 my-6">
-          <ToggleButton checked={withdrawalType} change={setWithdrawalType} />
-          <span>Automatic Withdrawal off/on</span>
+        <div>
+          <button
+            className=" my-5 px-4 py-3 rounded bg-bg"
+            onClick={() => setBankWithdrawalModal(true)}
+          >
+            Bank Withdrawal
+          </button>
         </div>
         <button
           onClick={sendWithdrawal}
@@ -158,6 +160,10 @@ const WithdrawalForm = () => {
           Send Request
         </button>
       </section>
+      <WithdrawalModal
+        hide={bankWithdrawalModal}
+        setHide={setBankWithdrawalModal}
+      />
     </div>
   );
 };

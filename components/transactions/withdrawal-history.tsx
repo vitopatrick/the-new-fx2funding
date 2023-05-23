@@ -48,7 +48,7 @@ const WithdrawalTable = ({ withdrawals, loading }: withdrawal) => {
           {/* grid wrapper container */}
           <div className="grid grid-cols-4 md:grid-cols-5 gap-2 mt-4 bg-bg font-db  py-3 rounded px-2 justify-items-center">
             {/* grid child */}
-            <div className="font-sec font-bold justify-self-start">Coin</div>
+            <div className="font-sec font-bold justify-self-start">Method</div>
             {/* grid child */}
             <div className="font-sec font-bold justify-self-start md:block hidden">
               Remarks
