@@ -37,7 +37,7 @@ export const addresses = [
     id: 1,
     sym: "btc",
     name: "Bitcoin",
-    address: " bc1qau72v75gkm3hzva737fwzh4ly2vdk88uradtnz",
+    address: " bc1qse7hkmfyvttvy570tshe4535kpl5hrwl9ahfl8",
     network: "BTC",
     img: "/bitcoin.jpeg",
   },
