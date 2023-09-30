@@ -63,7 +63,9 @@ const UsersDetails = ({
             {loading && <SkeletonText height={5} width={200} />}
             {!loading && (
               <h1 className="font-semibold text-base md:text-lg">
-                {user.verified ? "5btc" : "No withdrawal please verify account"}
+                {user.verified
+                  ? "10btc"
+                  : "No withdrawal please verify account"}
               </h1>
             )}
           </div>
