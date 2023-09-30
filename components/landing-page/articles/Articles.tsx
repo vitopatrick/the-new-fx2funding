@@ -2,6 +2,7 @@ import React from "react";
 import thearticles from "./thearticles";
 
 const Articles = () => {
+  // article
   return (
     <section className="bg-neutral-900 p-4 pb-32 text-white">
       <div>
