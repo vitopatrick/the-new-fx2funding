@@ -1,7 +1,7 @@
 "use client";
 import { useEffect } from "react";
 
-const useChatSupport = () => {
+export const useChatSupport = () => {
   useEffect(() => {
     const loadScript = () => {
       // Create a script element
@@ -22,4 +22,3 @@ const useChatSupport = () => {
   return null; // JivoChat widget will be injected into the DOM, so this component doesn't need to render anything
 };
 
-export default useChatSupport;
