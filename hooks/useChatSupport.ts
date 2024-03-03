@@ -1,17 +1,25 @@
+"use client";
 import { useEffect } from "react";
 
-export const useChatSupport = () => {
+const useChatSupport = () => {
   useEffect(() => {
-    var Tawk_API: any = Tawk_API || {},
-      Tawk_LoadStart = new Date();
-    (function () {
-      var s1: any = document.createElement("script"),
-        s0: any = document.getElementsByTagName("script")[0];
-      s1.async = true;
-      s1.src = "https://embed.tawk.to/64db9e4e94cf5d49dc6a8dc4/1h7su4q61";
-      s1.charset = "UTF-8";
-      s1.setAttribute("crossorigin", "*");
-      s0.parentNode.insertBefore(s1, s0);
-    })();
-  }, []);
+    const loadScript = () => {
+      // Create a script element
+      const script = document.createElement("script");
+
+      // Set the JivoChat script source
+      script.src = "//code.jivosite.com/widget/LvylXQnkP7";
+      script.async = true;
+
+      // Append the script to the body of the document
+      document.body.appendChild(script);
+    };
+
+    // Load the JivoChat script synchronously
+    loadScript();
+  }, []); // Empty dependency array to run the effect only once on mount
+
+  return null; // JivoChat widget will be injected into the DOM, so this component doesn't need to render anything
 };
+
+export default useChatSupport;
