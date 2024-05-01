@@ -43,8 +43,8 @@ export const SECOND_LINKS = [
     icon: <SiMarketo />,
   },
   {
-    key: "invest",
-    label: "Invest",
+    key: "Staking",
+    label: "Staking",
     path: "/invest",
     icon: <BsStack />,
   },

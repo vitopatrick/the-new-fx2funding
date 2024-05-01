@@ -35,7 +35,7 @@ const ProcessBody = () => {
         backgroundAttachment: "fixed",
         backgroundPosition: "50% 50%",
       }}
-      className="py-12 font-lp"
+      className="py-12 font-main"
     >
       <div className="w-[90%] md:w-[60%] mx-auto text-white">
         <div>

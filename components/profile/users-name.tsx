@@ -6,7 +6,7 @@ const UsersName = ({
   loading,
 }: UserType | null | {} | undefined | any) => {
   return (
-    <div className="mt-4 mb-10 px-3 font-db">
+    <div className="mt-4 mb-10 px-3 font-main">
       {/* parent flex container */}
       <div className="flex gap-4 items-center">
         {loading && <SkeletonCircle height={60} width={60} />}

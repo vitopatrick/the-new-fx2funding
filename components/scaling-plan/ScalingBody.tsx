@@ -28,7 +28,7 @@ const ScalingBody = () => {
         backgroundRepeat: "no-repeat",
         backgroundPosition: "50% 50%",
       }}
-      className="h-[100vh] md:h-[100vh] font-lp text-white"
+      className="h-[100vh] md:h-[100vh] font-main text-white"
     >
       {/* <ScalingHeader /> */}
       <div className="font-bold text-xl md:text-3xl space-y-10 px-3 pt-10 w-[90%] md:w-[60%] mx-auto">

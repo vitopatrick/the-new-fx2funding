@@ -44,12 +44,12 @@ const Plans = () => {
 
 const Card = ({ name, range, bonus, duration }: any) => {
   return (
-    <div className="w-full max-w-sm p-4 font-lp bg-gray-800 rounded-lg shadow sm:p-8">
+    <div className="w-full max-w-sm p-4 font-main bg-gray-800 rounded-lg shadow sm:p-8">
       <h5 className="mb-4 md:text-xl text-lg font-medium text-gray-500 dark:text-gray-400">
         {name}
       </h5>
       <div className="dark:text-white">
-        <span className="text-4xl font-extrabold font-num tracking-tight">
+        <span className="text-4xl font-extrabold font-main tracking-tight">
           {range}
         </span>
       </div>

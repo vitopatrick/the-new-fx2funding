@@ -85,7 +85,7 @@ const FaqAccordion = () => {
     setIndex(id);
   };
   return (
-    <div className="my-10 font-lp">
+    <div className="my-10 font-main">
       {faqs.map((faq) => (
         <div key={faq.id}>
           <h2>

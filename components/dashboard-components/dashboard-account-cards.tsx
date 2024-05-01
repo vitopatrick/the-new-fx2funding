@@ -8,7 +8,7 @@ const DashboardAccountCards = () => {
   console.log(user);
   return (
     <section>
-      <div className="py-3 px-1 font-main text-white font-semibold text-xl font-db">
+      <div className="py-3 px-1 font-main text-white font-semibold text-xl font-main">
         Account Summary
       </div>
 

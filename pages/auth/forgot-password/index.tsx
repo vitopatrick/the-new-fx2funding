@@ -5,7 +5,7 @@ const ForgottenPassword = () => {
   return (
     <>
       {/* page Wrapper class */}
-      <div className="w-screen h-screen font-db">
+      <div className="w-screen h-screen font-main">
         {/* parent div container */}
         <div className="flex justify-between h-screen relative">
           {/* CTA Markups */}

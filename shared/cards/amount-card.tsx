@@ -11,12 +11,12 @@ const AmountCard = ({ accountType, amount, loading }: AmountCardType) => {
     <div className="bg-bg text-white rounded font-sec w-full p-3">
       <div className="flex flex-col gap-3">
         <div>
-          <h1 className="font-semibold font-db">{accountType}</h1>
+          <h1 className="text-neutral-400 font-main">{accountType}</h1>
         </div>
         <div>
           {loading && <SkeletonText height={10} width={200} />}
           {!loading && (
-            <h1 className="font-bold text-2xl font-num">
+            <h1 className="font-semibold text-2xl font-main">
               {formatCurrency(amount)}
             </h1>
           )}

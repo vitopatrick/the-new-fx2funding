@@ -24,7 +24,7 @@ const Header = () => {
 
   return (
     <>
-      <div className="p-3 bg-bg text-white font-db">
+      <div className="p-3 bg-bg text-white font-main">
         {/* parent div */}
         <div className="flex justify-between items-center ">
           {/* flex item child */}

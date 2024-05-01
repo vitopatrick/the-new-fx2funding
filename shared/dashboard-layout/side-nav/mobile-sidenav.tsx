@@ -8,14 +8,15 @@ const MobileSideNav = ({ hide, setHide }: any) => {
 
   const boxClasses = (url: any) =>
     clsx({
-      ["font-db text-button font-main flex gap-1 items-center my-6 pl-4"]: true,
+      ["font-main text-button font-main flex gap-1 items-center my-6 pl-4"]:
+        true,
       ["bg-bg w-full py-2 pl-2 rounded-lg "]: pathname === url,
     });
 
   const textClasses = (url: any) =>
     clsx({
-      ["font-db"]: true,
-      ["font-db font-semibold text-orange-200"]: pathname === url,
+      ["font-main"]: true,
+      ["font-main font-semibold text-orange-200"]: pathname === url,
     });
 
   return (

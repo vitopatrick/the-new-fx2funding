@@ -57,18 +57,18 @@ const WithdrawalForm = () => {
   };
 
   return (
-    <div className="mx-2 text-white font-db">
-      <h3 className="font-sec py-3 text-lg md:text-xl font-semibold">
-        Withdraw Here
+    <div className="mx-2 text-white font-main">
+      <h3 className="font-main py-3 text-lg md:text-xl font-semibold text-center">
+        Withdraw
       </h3>
-      <p className="text-sm text-text_min font-sec">
-        Withdraw your trading profit, staking and other exchange profits
+      <p className="text-sm  font-main text-center">
+        Withdraw your trading profit, Staking and other exchange profits
       </p>
       {/* form section */}
       <section className="my-3">
-        <form className="flex flex-col md:flex-row md:items-center justify-between gap-2">
+        <form className="flex flex-col  md:items-center justify-between gap-2 md:w-1/2 mx-auto">
           {/* enter amount  */}
-          <div className="flex-1">
+          <div className="flex-1 w-full">
             <label htmlFor="amount" className="font-sec py-2 text-sm">
               Enter Amount
             </label>
@@ -84,7 +84,7 @@ const WithdrawalForm = () => {
             </div>
           </div>
           {/* enter remarks  */}
-          <div className="flex-1">
+          <div className="flex-1 w-full">
             <label
               htmlFor="Remarks"
               className="font-sec py-2 text-sm text-text_min"
@@ -104,7 +104,7 @@ const WithdrawalForm = () => {
           </div>
           {/* end of enter remarks */}
           {/* select coin */}
-          <div className="flex-1">
+          <div className="flex-1 w-full">
             <label
               htmlFor="coin type"
               className="font-sec py-2 text-sm text-text_min"
@@ -129,7 +129,7 @@ const WithdrawalForm = () => {
           </div>
           {/* end of select coin */}
           {/* enter amount  */}
-          <div className="flex-1">
+          <div className="flex-1 w-full">
             <label htmlFor="amount" className="font-sec py-2 text-sm">
               Enter address
             </label>
@@ -147,15 +147,15 @@ const WithdrawalForm = () => {
         </form>
         <div>
           <button
-            className=" my-5 px-4 py-3 rounded bg-bg"
+            className=" my-5 px-4 py-2 rounded border border-blue-500 text-blue-400 hover:text-blue-300 hover:border-blue-300 transition-all ease-in-out  block  w-1/2 mx-auto"
             onClick={() => setBankWithdrawalModal(true)}
           >
-            Bank Withdrawal
+            Choose Bank Withdrawal
           </button>
         </div>
         <button
           onClick={sendWithdrawal}
-          className="bg-bg rounded px-3 py-2 font-sec mt-2 w-full md:w-fit"
+          className="bg-blue-500 lg:w-1/2 w-full mx-auto rounded px-3 py-2 font-sec mt-2  block "
         >
           Send Request
         </button>

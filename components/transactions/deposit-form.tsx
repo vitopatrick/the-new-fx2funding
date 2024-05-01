@@ -54,7 +54,7 @@ const DepositForm = () => {
   };
 
   return (
-    <div className="mx-3 font-db my-4">
+    <div className="mx-3 font-main my-4">
       {/* barcode image */}
       {!selectedCoin && <div />}
       {selectedCoin && (
@@ -78,15 +78,15 @@ const DepositForm = () => {
       <div className="text-white font-main">
         {/* header */}
         <div>
-          <h4 className="font-sec font-medium py-2 capitalize text-lg">
+          <h4 className="font-main text-center py-2 capitalize text-lg">
             Deposit your cryptocurrency
           </h4>
         </div>
         {/* form to fill */}
         <section>
-          <form className="flex md:items-center justify-between py-2 md:flex-row flex-col gap-3">
+          <form className="flex  md:items-center justify-between py-2  lg:w-1/2 mx-auto  flex-col gap-3">
             {/* choose coin to deposit in */}
-            <div className="flex-1">
+            <div className="flex-1 w-full">
               <label htmlFor="coin" className="text-sm">
                 Choose Currency
               </label>
@@ -107,7 +107,7 @@ const DepositForm = () => {
               </div>
             </div>
             {/* enter amount to deposit */}
-            <div className="flex-1">
+            <div className="flex-1 w-full">
               <label htmlFor="amount" className="text-sm">
                 Enter Amount to deposit
               </label>
@@ -126,7 +126,7 @@ const DepositForm = () => {
           </form>
           <button
             onClick={depositCoin}
-            className="bg-bg py-2 rounded px-3 shadow w-full md:w-fit my-2"
+            className="bg-blue-500 block py-2 rounded px-3 shadow lg:w-1/2 mx-auto  my-2"
           >
             Deposit
           </button>

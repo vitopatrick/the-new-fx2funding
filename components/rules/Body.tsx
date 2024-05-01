@@ -31,7 +31,7 @@ const Body = () => {
         backgroundRepeat: "no-repeat",
         backgroundPosition: "50% 50%",
       }}
-      className="font-lp"
+      className="font-main"
     >
       <div>
         {/* <Header /> */}

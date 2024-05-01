@@ -14,7 +14,7 @@ const AboutHero = () => {
         backgroundAttachment: "fixed",
         backgroundPosition: "50% 0%",
       }}
-      className="h-[150vh] md:h-[120vh] font-lp"
+      className="h-[150vh] md:h-[120vh] font-main"
     >
       <div>
         <div className="mx-auto opacity-70 mix-blend-screen md:w-[50%]">

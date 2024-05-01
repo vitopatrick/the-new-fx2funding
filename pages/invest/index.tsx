@@ -7,21 +7,21 @@ const InvestmentPage = () => {
   return (
     <Layout>
       <div className="flex items-center flex-col justify-center">
-        <h4 className="text-white font-db underline text-4xl p-4 text-center">
+        <h4 className="text-white font-main underline text-4xl p-4 text-center">
           Invest With Us Today
         </h4>
-        <p className="font-db text-neutral-400">
+        <p className="font-main text-neutral-400">
           Choose a plan that fits your investment level
         </p>
       </div>
-      <div className="w-[90%] font-db mt-10 mx-auto grid md:grid-cols-3 gap-4">
+      <div className="w-[90%] font-main mt-10 mx-auto grid md:grid-cols-3 gap-4">
         {moreplans.map((plan) => (
           <div className="w-full max-w-sm p-4 rounded-lg shadow sm:p-8 bg-bg">
             <h5 className="mb-4 text-xl font-medium text-gray-500 dark:text-gray-400">
               {plan.name}
             </h5>
             <div className="f dark:text-white">
-              <span className="text-4xl font-num font-extrabold tracking-tight">
+              <span className="text-4xl font-main font-extrabold tracking-tight">
                 {plan.range}
               </span>
             </div>

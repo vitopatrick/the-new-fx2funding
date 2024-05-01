@@ -8,23 +8,22 @@ const Sidebar = () => {
 
   const boxClasses = (url: any) =>
     clsx({
-      ["font-db text-orange-100 font-main flex gap-1 items-center my-6 pl-4"]:
-        true,
-      ["bg-bg w-full py-2 pl-2 rounded-lg "]: pathname === url,
+      ["text-neutral-300 flex items-center gap-2 p-3  my-6"]: true,
+      ["bg-blue-500/20 rounded"]: pathname === url,
     });
 
   const textClasses = (url: any) =>
     clsx({
-      ["font-db"]: true,
-      ["font-db font-semibold text-orange-300"]: pathname === url,
+      ["font-main"]: true,
+      ["font-main font-semibold text-blue-500"]: pathname === url,
     });
 
   return (
     <div className="w-[260px] hidden md:block bg-bg h-full">
       {/* parent flex container */}
-      <div className="flex flex-col justify-between gap-4 p-3">
+      <div className="flex flex-col justify-between gap-4 p-3 h-full">
         {/* first links flex container */}
-        <div>
+        <div className="h-full">
           {/* logo flex container */}
           <div className="mb-8 font-bold text-button uppercase font-main text-xl">
             <img src="/logo.webp" alt="logo" className="w-[50%] p-2" />

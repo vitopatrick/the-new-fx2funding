@@ -4,7 +4,7 @@ const Hero = () => {
   return (
     <section
       style={{
-        background: `url('https://fx2funding.com/wp-content/uploads/2023/04/lp-hero-img-2.jpg')`,
+        background: `url('https://fx2funding.com/wp-content/uploads/2023/11/lp-hero-img-1.jpg')`,
         position: "relative",
       }}
       className="h-[70vh] md:h-[80vh]"
@@ -21,13 +21,14 @@ const Hero = () => {
         }}
       >
         <div className="w-[90%] mx-auto flex">
-          <div className="text-white capitalize self-center flex-col md:flex-row justify-self-center space-y-4  text-center md:text-left">
-            <h4 className="md:text-8xl  font-bold text-4xl">
-              A trader like you deserves to be funded.
+          <div className="text-white capitalize self-center flex-col md:flex-row justify-self-center space-y-4  text-center md:text-left w-4/12 flex-1">
+            <h4 className="md:text-6xl  font-bold text-3xl">
+              Funded accounts for traders like you.
             </h4>
             <p className="my-4 md:text-2xl text-lg">
-              Prove your market magic and enjoy comprehensive funding on your
-              road to trading mastery with FX2.
+              Lowest cost one-stage evaluation with super-simple rules. Join
+              thousands of traders worldwide who trust FX2 as their prop firm
+              trading partner.
             </p>
             <div className="space-x-4">
               <Link
@@ -44,7 +45,7 @@ const Hero = () => {
               </Link>
             </div>
           </div>
-          <div className="w-[30%] hidden md:block">
+          <div className="w-[20%] hidden md:block">
             <img src="/phone.png" alt="mobile_phone" />
           </div>
         </div>

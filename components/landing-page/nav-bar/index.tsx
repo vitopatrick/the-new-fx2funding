@@ -10,7 +10,7 @@ const Navbar = () => {
   return (
     <>
       <nav className="bg-bg text-white">
-        <div className="p-3 flex justify-between items-center font-lp">
+        <div className="p-3 flex justify-between items-center font-main">
           <Link href="/" className="p-3 md:w-[8%] w-[24%]">
             <img src="/logo.webp" alt="logo" />
           </Link>

@@ -25,7 +25,7 @@ const ContactPage = () => {
               backgroundSize: "cover",
             }}
           ></div>
-          <div className="text-center space-y-3 text-white font-lp">
+          <div className="text-center space-y-3 text-white font-main">
             <h4 className="font-semibold text-2xl md:text-4xl">
               Have any questions about FX2? We'd love to hear from you.
             </h4>

@@ -8,9 +8,10 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        lp: ["Poppins", "sans-serif"],
-        db: ["Jost", "sans-serif"],
-        num: ["Nunito Sans", "sans-serif"],
+        // lp: ["Poppins", "sans-serif"],
+        // db: ["Jost", "sans-serif"],
+        // num: ["Nunito Sans", "sans-serif"],
+        main:["Outfit", 'sans-serif']
       },
       colors: {
         bg: "#030712",

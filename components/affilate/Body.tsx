@@ -25,7 +25,7 @@ const BodyShare = () => {
       <div className="w-[90%] md:w-[60%] mx-auto py-20">
         <div className="py-10 flex flex-col md:flex-row items-center justify-between gap-4">
           {bodyPoints.map((point) => (
-            <div className="text-center font-lp hover:scale-110 hover:shadow-2xl p-4 ease-in transition-all">
+            <div className="text-center font-main hover:scale-110 hover:shadow-2xl p-4 ease-in transition-all">
               <h4 className="text-2xl font-semibold text-white mb-4">
                 {point.title}
               </h4>

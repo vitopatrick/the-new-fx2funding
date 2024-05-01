@@ -13,10 +13,10 @@ const FaqBody = () => {
         backgroundAttachment: "fixed",
         backgroundRepeat: "no-repeat",
       }}
-      className="font-lp"
+      className="font-main"
     >
       <div className="w-[90%] md:w-[60%] mx-auto p-4">
-        <div className="text-center font-lp">
+        <div className="text-center font-main">
           <h4 className="text-white text-3xl md:text-6xl font-bold my-5">
             FAQ
           </h4>

@@ -19,7 +19,7 @@ const Chart = () => {
   const { coin, loading } = useFetchAllCoin(selected, 30);
 
   return (
-    <div className="p-4 bg-bg text-white font-db rounded flex-1 items-stretch">
+    <div className="p-4 bg-bg text-white font-main rounded flex-1 items-stretch">
       {/* selector */}
       <div className="mb-8 flex items-center justify-between">
         <div className="bg-card py-1 px-2 rounded focus:border-paper focus:border-[1px]">
@@ -47,8 +47,8 @@ const Chart = () => {
             <AreaChart data={coin}>
               <defs>
                 <linearGradient id="colorPv" x1="0" y1="0" x2="0" y2="1">
-                  <stop offset="5%" stopColor="#d97706" stopOpacity={0.7} />
-                  <stop offset="95%" stopColor="#d97706" stopOpacity={0} />
+                  <stop offset="5%" stopColor="#1e40af" stopOpacity={0.3} />
+                  <stop offset="95%" stopColor="#1e40af" stopOpacity={0} />
                 </linearGradient>
               </defs>
               <XAxis dataKey="date" tickCount={4} />
