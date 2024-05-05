@@ -5,11 +5,10 @@ import { useFetchUser } from "../../hooks/useFetchUser";
 const DashboardAccountCards = () => {
   const { userState: user, loading }: any = useFetchUser();
 
-  console.log(user);
   return (
     <section>
       <div className="py-3 px-1 font-main text-white font-semibold text-xl font-main">
-        Account Summary
+        {user && user?.name}
       </div>
 
       <div className="flex md:flex-row flex-col items-center justify-between gap-3 py-3">
