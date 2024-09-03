@@ -8,7 +8,7 @@ export const useChatSupport = () => {
       const script = document.createElement("script");
 
       // Set the JivoChat script source
-      script.src = "//code.jivosite.com/widget/nKgzh8Y2GE"; 
+      script.src = "//code.tidio.co/bjq9wyuabntsqicx0rjk3muidb3v7y1r.js";
       script.async = true;
 
       // Append the script to the body of the document
